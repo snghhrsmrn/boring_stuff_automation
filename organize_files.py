@@ -3,7 +3,7 @@ import shutil
 
 
 destination = {
-    "documents": ['.txt', '.doc', '.docx', '.pdf', '.xlsx', '.pptx', '.ods', '.PDF', '.xls'],
+    "documents": ['.txt', '.doc', '.docx', '.pdf', '.xlsx', '.pptx', '.ods', '.PDF', '.xls', 'csv'],
     "images": ['.png', '.jpg', '.jpeg', '.gif', 'heic'],
     "videos": ['.mp4'],
     "torrents": ['.torrent'],
