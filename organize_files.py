@@ -12,6 +12,7 @@ destination = {
 }
 
 def folder_sorter(download_path):
+    print("Starting to sort folder...")
     for file in os.listdir(download_path):
         file_path = os.path.join(download_path, file)
         if os.path.isfile(file_path):
@@ -19,8 +20,12 @@ def folder_sorter(download_path):
                 if file.endswith(tuple(extensions)):
                     folder_path = os.path.join(download_path, folder)
                     os.makedirs(folder_path, exist_ok=True)
-                    shutil.move(file_path, folder_path)
+                    try:
+                        shutil.move(file_path, folder_path)
+                    except Exception as e:
+                        print(f"{e} in the folder")
     print("Folder sorted")
+    input("\nPress any key to continue...")
 
 download_path = input("Enter the path here: ")
 folder_sorter(download_path)
